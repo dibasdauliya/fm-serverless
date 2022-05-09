@@ -11,8 +11,16 @@ Learned from Frontend Masters course with Jason Lengstorf about serverless funct
 - [Hasura](https://cloud.hasura.io/)
 - [Heroku](https://www.heroku.com/)
 
-## Setup `.env`
+## Setup
 
 ```bash
+nvm install
+npm i
 cp .env.example .env
+
+# install netlify cli to run serverless functions
+npm i -g netlify-cli
+
+# run the project
+ntl dev
 ```

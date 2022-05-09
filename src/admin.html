@@ -77,6 +77,13 @@
 </form>
 
 <script>
+  function displayStatusMsg(status) {
+    document.querySelector('.message').innerText = `Response: ${status}`
+    setTimeout(() => {
+      document.querySelector('.message').remove()
+    }, 3000)
+  }
+
   async function addMovie(e) {
     e.preventDefault()
 
@@ -91,7 +98,7 @@
         poster: data.get('poster')
       })
     }).then((res) => {
-      document.querySelector('.message').innerText = `Response: ${res.status}`
+      displayStatusMsg(res.status)
     })
   }
 
